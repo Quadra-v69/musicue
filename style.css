@@ -1,0 +1,45 @@
+body {
+  background-color: #222;
+  overflow: hidden;
+}
+canvas {
+  background: radial-gradient( farthest-corner circle at left bottom, #0213ff, #ff0101);
+  margin: 0 auto;
+}
+/* Popup overlay */
+.rantu-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #0088ff 0%, #000000 100%);
+  padding: 30px 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 70px rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  text-align: center;
+  color: white;
+  font-family: Arial, sans-serif;
+  animation: popupFade 0.5s ease forwards;
+}
+
+.rantu-popup .graphic {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 15px;
+  background: url('https://media1.tenor.com/m/ylDdtmdIztgAAAAC/pepewifhat.gif') center/cover no-repeat;
+  border-radius: 50%;
+}
+
+/* Animation */
+@keyframes popupFade {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
